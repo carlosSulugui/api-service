@@ -1,0 +1,52 @@
+###create provider and pig
+POST http://localhost:4000/api/tasks/task/provider
+content-type: application/json
+
+{
+  "name": "provider01",
+  "phone": "12589",
+  "address": "calle 1",
+  "id_task": "ffdaf51a-8b9c-4d10-8075-81813e48e2fa",
+  "animal": {
+    "price": 100,
+    "weight": 100,
+    "status": "isLive"
+  }
+}
+
+
+
+
+###
+POST http://localhost:4000/api/tasks/task/storage/a7f11071-0736-42e1-9d24-9a2de733c3dd
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="photo"; filename="20220623_214107.jpg"
+
+< /Users/macbook/Documents/api-pig/src/img/20220623_214107.jpg
+--WebAppBoundary--
+
+###
+### create task
+POST http://localhost:4000/api/tasks/task
+content-type: application/json
+
+{
+    "task_name": "task  44",
+    "task_description": "la concordi"
+}
+
+
+
+
+
+
+
+### Delete task
+DELETE http://localhost:4000/api/tasks/task/2741d718-9ee9-11ee-96d9-0242ac150002
+### obtener tareas con sus proveedores y cerdos
+GET https://apig.luitam.com/api/tasks/task
+
+### obtener tareas con sus proveedores y cerdos
+GET http://localhost:4000/api/tasks/task/provider
