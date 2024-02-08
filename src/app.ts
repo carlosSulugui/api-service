@@ -6,7 +6,7 @@ import config from "./config";
 const app = express();
 
 
-const whiteList = ["http://localhost:3000"]
+const whiteList = ["http://localhost:3000", "45.228.233.159", "190.56.95.34"]
 
 
 app.use(express.json());
