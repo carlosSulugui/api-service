@@ -6,7 +6,7 @@ import config from "./config";
 const app = express();
 
 
-const whiteList = ["http://localhost:3000", "45.228.233.159", "190.56.95.34"]
+const whiteList = ["http://localhost:3000", "http://45.228.233.159", "http://190.56.95.34"]
 
 
 app.use(express.json());
@@ -14,6 +14,7 @@ app.use(express.json());
 app.use(cors({
   origin:
     (origin, callback) => {
+    console.log(origin)
       if (origin && whiteList.includes(origin)) return callback(null, origin)
       return callback(Error("not allowed by cors"))
     },
