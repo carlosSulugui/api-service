@@ -14,8 +14,8 @@ app.use(express.json());
 app.use(cors({
   origin:
     (origin, callback) => {
-    console.log(origin)
-      if (origin && whiteList.includes(origin)) return callback(null, origin)
+      if (!origin || whiteList.includes(origin)) return callback(null, origin)
+      console.log(origin)
       return callback(Error("not allowed by cors"))
     },
   credentials: true// para que se envien las cookies
