@@ -14,7 +14,7 @@ fs.readdirSync(`${__dirname}`).filter(file => {
   if (newName !== "index") {
     import (`./${file}`)
       .then((__router) => {
-        router.use(`/api/tasks/${newName}`, __router.default)
+        router.use(`/api/${newName}`, __router.default)
       })
   }
 })

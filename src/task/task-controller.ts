@@ -16,12 +16,9 @@ const createTask = async (req: Request, res: Response) => {
 const createProviderImg = async (req: Request, res: Response) => {
   const {id} = req.params
   const file = req.file?.filename
-  const url = `/img/${id}/${file}`
+  const url = `https://apig.luitam.com/img/${id}/${file}`
   try {
-
-    console.log(url)
     const result = await service.createProviderImg(id, url)
-    console.log("controller",result)
     return res.status(200).json(result)
   } catch (e) {
     console.log(e)

@@ -3,10 +3,10 @@ POST http://localhost:4000/api/tasks/task/provider
 content-type: application/json
 
 {
-  "name": "provider01",
+  "name": "provider3",
   "phone": "12589",
   "address": "calle 1",
-  "id_task": "ffdaf51a-8b9c-4d10-8075-81813e48e2fa",
+  "id_task": "ba399aca-0817-4358-8c5e-1b8c31c92fc2",
   "animal": {
     "price": 100,
     "weight": 100,
@@ -18,13 +18,13 @@ content-type: application/json
 
 
 ###
-POST http://localhost:4000/api/tasks/task/storage/a7f11071-0736-42e1-9d24-9a2de733c3dd
+POST http://localhost:4000/api/tasks/task/storage/856f8f9a-ab03-422e-ac38-2099dc70940d
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 
 --WebAppBoundary
-Content-Disposition: form-data; name="photo"; filename="20220623_214107.jpg"
+Content-Disposition: form-data; name="photo"; filename="cope.png"
 
-< /Users/macbook/Documents/api-pig/src/img/20220623_214107.jpg
+< /Users/macbook/Documents/api-pig/src/img/cope.png
 --WebAppBoundary--
 
 ###
@@ -46,7 +46,7 @@ content-type: application/json
 ### Delete task
 DELETE http://localhost:4000/api/tasks/task/2741d718-9ee9-11ee-96d9-0242ac150002
 ### obtener tareas con sus proveedores y cerdos
-GET https://apig.luitam.com/api/tasks/task
+GET http://localhost:4000/api/tasks/task
 
 ### obtener tareas con sus proveedores y cerdos
 GET http://localhost:4000/api/tasks/task/provider
