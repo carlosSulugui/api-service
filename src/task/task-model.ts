@@ -66,8 +66,8 @@ const createProviderImg = async (id: string, img: string) => {
 const getTasks = async () => {
   const sql: string = `select *
                        from tasks `
-  const {rows} = await connection.query(sql)
-  return rows
+  const {rows:task} = await connection.query(sql)
+  return {task}
 }
 
 
